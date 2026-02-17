@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ Massy — Stratège médias sociaux senior · Montréal</title>
+    <meta name="description" content="Stratège médias sociaux senior à Montréal. Stratégies éditoriales alignées sur vos objectifs d'affaires, lignes éditoriales, plans de contenu mensuel et outils d'exécution pour PME, corporatifs et OBNL.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌶️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #070001;
+            --licorice: #2D0007;
+            --carmine: #930C16;
+            --beige: #EBF0CD;
+            --dim-gray: #7b7160;
+            --serif: 'Instrument Serif', Georgia, serif;
+            --mono: 'Roboto Mono', 'Courier New', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--mono);
+            color: var(--black);
+            background: var(--beige);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ========== NAV ========== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.4s, backdrop-filter 0.4s;
+        }
+
+        nav.scrolled {
+            background: rgba(45, 0, 7, 0.92);
+            backdrop-filter: blur(12px);
+        }
+
+        nav .nav-name {
+            font-family: var(--serif);
+            font-size: 1.125rem;
+            color: var(--beige);
+            text-decoration: none;
+            letter-spacing: 0.01em;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav .nav-links a {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--beige);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        nav .nav-links a:hover { opacity: 1; }
+
+        nav .lang-toggle {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--carmine);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 1px solid var(--carmine);
+            padding: 0.3rem 0.6rem;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav .lang-toggle:hover {
+            background: var(--carmine);
+            color: var(--beige);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            background: var(--licorice);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--carmine);
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            color: var(--beige);
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .hero-text .subtitle {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            color: var(--dim-gray);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-text .positioning {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+            color: var(--beige);
+            line-height: 1.4;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .specialties span {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--dim-gray);
+            border: 1px solid rgba(7, 0, 1, 0.15);
+            padding: 0.35rem 0.75rem;
+            border-radius: 2px;
+        }
+
+        .hero-text .cta-link {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--carmine);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s;
+        }
+
+        .hero-text .cta-link:hover { gap: 1rem; }
+
+        .hero-photo {
+            display: flex;
+            justify-content: flex-end;
+            width: 340px;
+            height: 440px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* ========== SECTION STYLING ========== */
+        section {
+            padding: 12rem 2rem;
+            position: relative;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--carmine);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            max-width: 640px;
+        }
+
+        /* ========== PROBLEMS ========== */
+        .problems {
+            background: 
+                radial-gradient(ellipse at 15% 20%, rgba(112, 15, 16, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 85% 75%, rgba(48, 32, 17, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 0%, rgba(164, 87, 60, 0.06) 0%, transparent 40%),
+                radial-gradient(ellipse at 70% 40%, rgba(60, 55, 30, 0.05) 0%, transparent 45%),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(48, 32, 17, 0.015) 2px,
+                    rgba(48, 32, 17, 0.015) 4px
+                ),
+                linear-gradient(170deg, #e2dbd0 0%, #ddd5c7 30%, #d8cfbf 60%, #ddd4c5 100%);
+            overflow: hidden;
+        }
+
+        .problems::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .problems .section-inner { position: relative; z-index: 1; }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            padding: 2rem 0;
+            border-top: 1px solid rgba(7, 0, 1, 0.12);
+        }
+
+        .problem-card .quote {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--licorice);
+            margin-bottom: 1rem;
+            line-height: 1.35;
+        }
+
+        .problem-card p {
+            color: var(--dim-gray);
+            font-size: 0.8rem;
+        }
+
+        /* ========== SOLUTION ========== */
+        .solution {
+            background: var(--licorice);
+            color: var(--beige);
+        }
+
+        .solution .section-label { color: var(--carmine); }
+        .solution h2 { color: var(--beige); }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .solution-item {
+            border-top: 1px solid rgba(147, 12, 22, 0.4);
+            padding-top: 1.5rem;
+        }
+
+        .solution-item .number {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--carmine);
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .solution-item h3 {
+            color: var(--beige);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .solution-item p {
+            color: rgba(235, 240, 205, 0.7);
+            font-size: 0.8rem;
+            max-width: none;
+        }
+
+        .partner-note {
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(7, 0, 1, 0.1);
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--dim-gray);
+            max-width: 700px;
+            line-height: 1.5;
+        }
+
+        .solution .partner-note {
+            border-top-color: rgba(147, 12, 22, 0.25);
+            color: rgba(235, 240, 205, 0.8);
+        }
+
+        /* ========== PROCESS ========== */
+        .process { background: #e8e4de; }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 1.35rem;
+            left: 5%;
+            right: 5%;
+            height: 1px;
+            background: var(--carmine);
+            opacity: 0.4;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 0 0.75rem;
+            position: relative;
+        }
+
+        .process-step .dot {
+            width: 12px;
+            height: 12px;
+            background: var(--carmine);
+            border-radius: 50%;
+            margin: 0 auto 1.25rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-step .step-name {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step .step-desc {
+            font-size: 0.75rem;
+            color: var(--dim-gray);
+            line-height: 1.5;
+        }
+
+        /* ========== CASE STUDIES ========== */
+        .cases { background: var(--beige); }
+
+        .case-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(7, 0, 1, 0.1);
+            align-items: start;
+        }
+
+        .case-card:first-of-type { margin-top: 2rem; }
+
+        .case-card .case-meta {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--carmine);
+            margin-bottom: 0.75rem;
+        }
+
+        .case-card h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+
+        .case-card .case-desc {
+            color: var(--dim-gray);
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .case-tag {
+            font-size: 0.65rem;
+            font-family: var(--mono);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.35rem 0.75rem;
+            border: 1px solid rgba(7, 0, 1, 0.15);
+            color: var(--dim-gray);
+        }
+
+        .case-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .case-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(7, 0, 1, 0.08);
+        }
+
+        .case-stat .stat-value {
+            font-family: var(--serif);
+            font-size: 1.8rem;
+            color: var(--carmine);
+        }
+
+        .case-stat .stat-label {
+            font-size: 0.7rem;
+            color: var(--dim-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-align: right;
+            max-width: 160px;
+        }
+
+        .visual-placeholder {
+            background: var(--licorice);
+            color: var(--dim-gray);
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.06em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 220px;
+            border: 1px solid rgba(147, 12, 22, 0.3);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .methodology-preview {
+            background: var(--licorice);
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .method-box {
+            border: 1px solid rgba(147, 12, 22, 0.3);
+            padding: 1.25rem;
+        }
+
+        .method-box .method-label {
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--carmine);
+            margin-bottom: 0.5rem;
+        }
+
+        .method-box .method-name {
+            font-family: var(--serif);
+            font-size: 1rem;
+            color: var(--beige);
+            line-height: 1.3;
+        }
+
+        /* ========== LOGOS ========== */
+        .logos-section {
+            background: var(--licorice);
+            color: var(--beige);
+            text-align: center;
+        }
+
+        .logos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            opacity: 0.5;
+        }
+
+        .logo-item {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--beige);
+        }
+
+        .newsletter-mention {
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(147, 12, 22, 0.25);
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            color: rgba(235, 240, 205, 0.5);
+        }
+
+        .newsletter-mention a {
+            color: var(--carmine);
+            text-decoration: none;
+        }
+
+        /* ========== ABOUT ========== */
+        .about { background: var(--beige); }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--dim-gray);
+        }
+
+        .about-text p:first-of-type {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            color: var(--black);
+            line-height: 1.5;
+        }
+
+        .about-details {
+            font-size: 0.75rem;
+            color: var(--dim-gray);
+        }
+
+        .about-details dt {
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.65rem;
+            color: var(--carmine);
+            margin-bottom: 0.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .about-details dt:first-of-type { margin-top: 0; }
+        .about-details dd { margin-bottom: 0; }
+
+        /* ========== CONTACT ========== */
+        .contact {
+            background: var(--licorice);
+            color: var(--beige);
+            text-align: center;
+            padding: 12rem 2rem;
+        }
+
+        .contact::after { display: none; }
+        .contact h2 { color: var(--beige); margin-bottom: 1rem; }
+
+        .contact .contact-subtitle {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.1rem;
+            color: rgba(235, 240, 205, 0.7);
+            margin-bottom: 3rem;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+
+        .contact-links a {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            color: var(--carmine);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .contact-links a:hover { border-color: var(--carmine); }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--black);
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            font-size: 0.65rem;
+            color: var(--dim-gray);
+            letter-spacing: 0.05em;
+        }
+
+        footer a {
+            color: var(--dim-gray);
+            text-decoration: none;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-photo { display: none; }
+            .hero { min-height: auto; padding: 10rem 2rem 5rem; }
+            .problems-grid { grid-template-columns: 1fr; }
+            .solution-grid { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: 1fr; gap: 2rem; }
+            .process-steps::before { display: none; }
+            .process-step { text-align: left; padding: 0; display: flex; gap: 1rem; align-items: flex-start; }
+            .process-step .dot { margin: 0.35rem 0 0; flex-shrink: 0; }
+            .case-card { grid-template-columns: 1fr; gap: 2rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .methodology-preview { grid-template-columns: 1fr; }
+            nav .nav-links a.desktop-link { display: none; }
+        }
+
+        @media (max-width: 600px) {
+            section { padding: 7rem 1.25rem; }
+            .hero { padding: 8rem 1.25rem 4rem; }
+            nav { padding: 1rem 1.25rem; }
+            .contact { padding: 5rem 1.25rem; }
+            .contact-links { flex-direction: column; align-items: center; gap: 1.5rem; }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+    <a href="#" class="nav-name">MJ Massy</a>
+    <div class="nav-links">
+        <a href="#approche" class="desktop-link">Approche</a>
+        <a href="#travail" class="desktop-link">Travail</a>
+        <a href="#a-propos" class="desktop-link">À propos</a>
+        <a href="#contact" class="desktop-link">Contact</a>
+        <a href="../en/" class="lang-toggle">EN</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <h1>MJ Massy</h1>
+            <p class="subtitle">Stratège médias sociaux senior · Montréal</p>
+            <p class="positioning">Je traduis ce qui rend votre marque unique en une stratégie que votre équipe peut vraiment exécuter.</p>
+            <div class="specialties">
+                <span>Stratégie de marque</span>
+                <span>Médias sociaux</span>
+                <span>Audience-first</span>
+                <span>Outils sur mesure</span>
+                <span>Parcours client</span>
+                <span>IA agentique</span>
+            </div>
+            <a href="#problemes" class="cta-link">Découvrir comment <span>→</span></a>
+        </div>
+        <div class="hero-photo">
+            <img src="../mj_massy_bw.jpg" alt="MJ Massy" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+        </div>
+    </div>
+</section>
+
+<!-- PROBLÈMES -->
+<section class="problems" id="problemes">
+    <div class="section-inner">
+        <p class="section-label">Ça vous parle?</p>
+        <h2>Ce qui revient souvent<br>chez mes clients.</h2>
+        <div class="problems-grid">
+            <div class="problem-card fade-in">
+                <p class="quote">«&nbsp;L'équipe court après son ombre — personne n'a le temps de lever la tête et de réfléchir.&nbsp;»</p>
+                <p>Des équipes prises dans la production quotidienne, sans vision pour guider les décisions.</p>
+            </div>
+            <div class="problem-card fade-in">
+                <p class="quote">«&nbsp;On a besoin d'un regard extérieur. On est le poisson dans son propre bocal.&nbsp;»</p>
+                <p>Impossible de prendre du recul quand on est dans le feu de l'action tous les jours.</p>
+            </div>
+            <div class="problem-card fade-in">
+                <p class="quote">«&nbsp;Notre objectif principal? Redevenir pertinents. Point.&nbsp;»</p>
+                <p>Ce n'est pas une question d'abonnés — c'est regagner l'attention des gens qui comptent.</p>
+            </div>
+            <div class="problem-card fade-in">
+                <p class="quote">«&nbsp;Je ne veux pas avoir à me demander quoi faire. On doit savoir exactement quoi publier chaque semaine.&nbsp;»</p>
+                <p>Une formule, pas un remue-méninges. Un système clair que l'équipe peut exécuter sans hésiter.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CE QUE JE LIVRE -->
+<section class="process" id="approche">
+    <div class="section-inner">
+        <p class="section-label">Ce que je livre</p>
+        <h2>Un système stratégique complet —<br>pas un document de plus.</h2>
+
+        <!-- Process Flow Diagram -->
+        <div style="margin: 3rem 0; overflow-x: auto;">
+            <svg viewBox="0 0 900 100" xmlns="http://www.w3.org/2000/svg" style="width: 100%; min-width: 600px;">
+                <!-- Connecting line -->
+                <line x1="112" y1="32" x2="788" y2="32" stroke="#930C16" stroke-width="0.75" stroke-opacity="0.3"/>
+
+                <!-- Step 1 -->
+                <circle cx="112" cy="32" r="12" fill="none" stroke="#930C16" stroke-width="1.2"/>
+                <text x="112" y="36" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="9" fill="#930C16">01</text>
+                <text x="112" y="58" text-anchor="middle" font-family="'Playfair Display', serif" font-size="13" fill="#070001">Découverte</text>
+                <text x="112" y="74" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="7.5" fill="#6B6461" letter-spacing="0.06em">AUDIT · DONNÉES · FAITS</text>
+
+                <!-- Step 2 -->
+                <circle cx="338" cy="32" r="12" fill="none" stroke="#930C16" stroke-width="1.2"/>
+                <text x="338" y="36" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="9" fill="#930C16">02</text>
+                <text x="338" y="58" text-anchor="middle" font-family="'Playfair Display', serif" font-size="13" fill="#070001">Cadre</text>
+                <text x="338" y="74" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="7.5" fill="#6B6461" letter-spacing="0.06em">IDÉE · MISSIONS · FILTRES</text>
+
+                <!-- Step 3 -->
+                <circle cx="562" cy="32" r="12" fill="none" stroke="#930C16" stroke-width="1.2"/>
+                <text x="562" y="36" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="9" fill="#930C16">03</text>
+                <text x="562" y="58" text-anchor="middle" font-family="'Playfair Display', serif" font-size="13" fill="#070001">Outils</text>
+                <text x="562" y="74" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="7.5" fill="#6B6461" letter-spacing="0.06em">GABARITS · GUIDES · SYSTÈME</text>
+
+                <!-- Step 4 -->
+                <circle cx="788" cy="32" r="12" fill="none" stroke="#930C16" stroke-width="1.2"/>
+                <text x="788" y="36" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="9" fill="#930C16">04</text>
+                <text x="788" y="58" text-anchor="middle" font-family="'Playfair Display', serif" font-size="13" fill="#070001">Activation</text>
+                <text x="788" y="74" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="7.5" fill="#6B6461" letter-spacing="0.06em">FORMATION · AUTONOMIE</text>
+
+                <!-- Arrow tips -->
+                <polygon points="305,29 305,35 312,32" fill="#930C16" fill-opacity="0.4"/>
+                <polygon points="529,29 529,35 536,32" fill="#930C16" fill-opacity="0.4"/>
+                <polygon points="755,29 755,35 762,32" fill="#930C16" fill-opacity="0.4"/>
+            </svg>
+        </div>
+
+        <div class="problems-grid" style="gap: 2.5rem; margin-top: 3rem;">
+            <div style="padding: 0;">
+                <p style="font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--carmine); margin-bottom: 0.75rem;">01 · Découverte et constats</p>
+                <p style="font-family: var(--serif); font-size: 1.25rem; color: var(--licorice); margin-bottom: 0.6rem;">Comprendre votre point de départ</p>
+                <p style="font-size: 0.9rem; color: var(--dim-gray); line-height: 1.6;">Audit de positionnement, analyse d'audience, motivations consommateurs, audit de contenu. Les faits — pas les suppositions.</p>
+            </div>
+
+            <div style="padding: 0;">
+                <p style="font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--carmine); margin-bottom: 0.75rem;">02 · Cadre stratégique</p>
+                <p style="font-family: var(--serif); font-size: 1.25rem; color: var(--licorice); margin-bottom: 0.6rem;">Votre filtre pour chaque décision</p>
+                <p style="font-size: 0.9rem; color: var(--dim-gray); line-height: 1.6;">Une idée directrice qui ancre tout. Des missions consommateur qui identifient les vrais moments de besoin. Des catégories de contenu qui remplacent «&nbsp;on publie quoi?&nbsp;»</p>
+            </div>
+
+            <div style="padding: 0;">
+                <p style="font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--carmine); margin-bottom: 0.75rem;">03 · Outils d'exécution</p>
+                <p style="font-family: var(--serif); font-size: 1.25rem; color: var(--licorice); margin-bottom: 0.6rem;">Rendre le travail facile à faire</p>
+                <p style="font-size: 0.9rem; color: var(--dim-gray); line-height: 1.6;">Calendrier de contenu, thématiques mensuelles basées sur les préoccupations de votre consommateur, best-practices visuels et vidéo, captions, mots-clés, bio Instagram, hashtags, hooks.</p>
+            </div>
+
+            <div style="padding: 0;">
+                <p style="font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--carmine); margin-bottom: 0.75rem;">04 · Activation</p>
+                <p style="font-family: var(--serif); font-size: 1.25rem; color: var(--licorice); margin-bottom: 0.6rem;">Préparer votre équipe à rouler</p>
+                <p style="font-size: 0.9rem; color: var(--dim-gray); line-height: 1.6;">Formation, ateliers, suivis post-lancement. L'objectif : une équipe autonome, pas une dépendance.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid rgba(7,0,1,0.1);">
+            <p class="section-label" style="margin-bottom: 1.5rem;">Vous repartez avec</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div style="padding: 1.25rem 0; border-top: 2px solid var(--carmine);">
+                    <p style="font-family: var(--serif); font-size: 1.15rem; color: var(--licorice); margin-bottom: 0.35rem;">Présentation stratégique</p>
+                    <p style="font-size: 0.85rem; color: var(--dim-gray);">Analyse 4C, idée directrice, missions consommateur, cadre créatif, stratégie de contenu payant.</p>
+                </div>
+                <div style="padding: 1.25rem 0; border-top: 2px solid var(--carmine);">
+                    <p style="font-family: var(--serif); font-size: 1.15rem; color: var(--licorice); margin-bottom: 0.35rem;">Guide stratégique interactif</p>
+                    <p style="font-size: 0.85rem; color: var(--dim-gray);">Document web évolutif comprenant : vision sociale, principes directeurs, cadre stratégique, missions consommateur, catégories de contenu, production et publication, planification, mesure — plus des annexes (audience, playbooks par mission et par catégorie, gabarits, bibliothèque de hooks et captions, calendrier, rapports, programme EGC, outils).</p>
+                </div>
+                <div style="padding: 1.25rem 0; border-top: 2px solid var(--carmine);">
+                    <p style="font-family: var(--serif); font-size: 1.15rem; color: var(--licorice); margin-bottom: 0.35rem;">Calendrier de contenu</p>
+                    <p style="font-size: 0.85rem; color: var(--dim-gray);">Trimestriel, mensuel et hebdomadaire — intégré à votre calendrier marketing. Toutes les thématiques et catégories de contenu sont en place : votre équipe n'a plus qu'à exécuter.</p>
+                </div>
+                <div style="padding: 1.25rem 0; border-top: 2px solid var(--carmine);">
+                    <p style="font-family: var(--serif); font-size: 1.15rem; color: var(--licorice); margin-bottom: 0.35rem;">Tableau de bord et mesure</p>
+                    <p style="font-size: 0.85rem; color: var(--dim-gray);">Intégré avec des formules et des objectifs clairs. Copiez-collez vos données — elles se remplissent automatiquement avec un système feu de signalisation (vert, jaune, rouge) pour que vous sachiez exactement ce qui fonctionne.</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="partner-note">Je me concentre sur la stratégie, la direction et les systèmes. Pour la production, je travaille avec des partenaires de confiance — ou je forme votre équipe interne.</p>
+    </div>
+</section>
+
+<!-- COMMENT J'Y ARRIVE -->
+<section class="solution">
+    <div class="section-inner">
+        <p class="section-label">Comment j'y arrive</p>
+        <h2>Trois étapes. Votre équipe<br>est impliquée à chacune.</h2>
+
+        <!-- 4Cs Quadrant Diagram -->
+        <div style="max-width: 560px; margin: 3rem auto;">
+            <svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" style="width: 100%;">
+                <line x1="280" y1="10" x2="280" y2="270" stroke="#930C16" stroke-width="0.5" stroke-opacity="0.3"/>
+                <line x1="40" y1="140" x2="520" y2="140" stroke="#930C16" stroke-width="0.5" stroke-opacity="0.3"/>
+                <text x="160" y="68" text-anchor="middle" font-family="'Playfair Display', serif" font-size="16" fill="#DCD5C4">Entreprise</text>
+                <text x="160" y="86" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="8" fill="#6B6461" letter-spacing="0.08em">FORCES · LIMITES · ADN</text>
+                <text x="400" y="68" text-anchor="middle" font-family="'Playfair Display', serif" font-size="16" fill="#DCD5C4">Catégorie</text>
+                <text x="400" y="86" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="8" fill="#6B6461" letter-spacing="0.08em">CONCURRENCE · TENDANCES</text>
+                <text x="160" y="208" text-anchor="middle" font-family="'Playfair Display', serif" font-size="16" fill="#DCD5C4">Consommateur</text>
+                <text x="160" y="226" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="8" fill="#6B6461" letter-spacing="0.08em">MOTIVATIONS · IRRITANTS</text>
+                <text x="400" y="208" text-anchor="middle" font-family="'Playfair Display', serif" font-size="16" fill="#DCD5C4">Culture</text>
+                <text x="400" y="226" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="8" fill="#6B6461" letter-spacing="0.08em">SIGNAUX · TENSIONS</text>
+                <circle cx="280" cy="140" r="24" fill="none" stroke="#930C16" stroke-width="1.5"/>
+                <text x="280" y="137" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="7" fill="#930C16" letter-spacing="0.1em">IDÉE</text>
+                <text x="280" y="148" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="7" fill="#930C16" letter-spacing="0.1em">DIRECTRICE</text>
+                <line x1="160" y1="96" x2="259" y2="127" stroke="#930C16" stroke-width="0.5" stroke-opacity="0.4"/>
+                <line x1="400" y1="96" x2="301" y2="127" stroke="#930C16" stroke-width="0.5" stroke-opacity="0.4"/>
+                <line x1="160" y1="196" x2="259" y2="155" stroke="#930C16" stroke-width="0.5" stroke-opacity="0.4"/>
+                <line x1="400" y1="196" x2="301" y2="155" stroke="#930C16" stroke-width="0.5" stroke-opacity="0.4"/>
+            </svg>
+        </div>
+
+        <div class="solution-grid">
+            <div class="solution-item fade-in">
+                <p class="number">01</p>
+                <h3>Les 4C — un ancrage dans le réel</h3>
+                <p>On s'aligne d'abord sur ce qui est vrai : l'entreprise, le marché, la clientèle cible et la culture. Où sont les tensions? Les occasions manquées? Tout ce qui sera proposé par la suite repose sur ces quatre prismes. Un regard extérieur qui aide à prendre du recul — parce qu'une marque qui se valide uniquement de l'interne finit par répondre à ses propres convictions plutôt qu'aux vrais enjeux d'affaires.</p>
+            </div>
+            <div class="solution-item fade-in">
+                <p class="number">02</p>
+                <h3>L'atelier — de mon analyse à votre vérité partagée</h3>
+                <p>À l'issue des 4C, j'arrive avec des constats clés sur votre clientèle, votre catégorie et votre positionnement actuel. Plutôt que de vous les imposer, on les met à l'épreuve ensemble. Chaque constat est évalué en direct par votre équipe sur deux axes : est-ce qu'on y croit? Et est-ce qu'on peut agir dessus avec les outils du mandat? La stratégie finale repose sur ce que l'équipe a validé — pas sur une analyse extérieure déconnectée du terrain.</p>
+            </div>
+            <div class="solution-item fade-in">
+                <p class="number">03</p>
+                <h3>Un système vivant que votre équipe peut s'approprier</h3>
+                <p>Le guide stratégique n'est pas un PDF qui ramasse la poussière. C'est un document interactif et évolutif que votre équipe consulte au quotidien — avec des formules de contenu, des gabarits de rédaction, des principes de qualité et des indicateurs de mesure. Il fonctionne que le contenu soit créé à l'interne, par un partenaire ou par un pigiste.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ÉTUDES DE CAS -->
+<section class="cases" id="travail">
+    <div class="section-inner">
+        <p class="section-label">Travail sélectionné</p>
+        <h2>Études de cas.</h2>
+
+        <!-- RUBINO -->
+        <div class="case-card fade-in">
+            <div>
+                <p class="case-meta">Stratégie de marque · Calendrier de contenu · Implémentation</p>
+                <h3>Les Chaussures Rubino</h3>
+                <p class="case-desc">Un détaillant québécois de 30+ ans avait perdu sa direction créative suite à une acquisition. Coincé en mode promotionnel, l'équipe avait besoin d'un système — pas juste du contenu. J'ai bâti une fondation stratégique complète à travers des ateliers collaboratifs, puis livré un guide stratégique interactif que l'équipe interne, l'agence créative et les partenaires d'influence utilisent au quotidien.</p>
+                <div class="case-tags">
+                    <span class="case-tag">Audit 4C</span>
+                    <span class="case-tag">Missions consommateur</span>
+                    <span class="case-tag">Catégories de contenu</span>
+                    <span class="case-tag">Guide stratégique interactif</span>
+                    <span class="case-tag">Formation d'équipe</span>
+                    <span class="case-tag">Stratégie d'influence</span>
+                </div>
+            </div>
+            <div class="case-visual">
+                <div class="visual-placeholder">Capture du guide stratégique interactif</div>
+            </div>
+        </div>
+
+        <!-- SHWAP CLUB -->
+        <div class="case-card fade-in">
+            <div>
+                <p class="case-meta">Stratégie de contenu · Formation</p>
+                <h3>Shwap Club</h3>
+                <p class="case-desc">Une plateforme mode montréalaise avec un concept fort mais une présence sociale qui ne suivait pas. Audit complet, repositionnement de la stratégie de contenu et formation de l'équipe interne pour qu'elle devienne autonome. Résultat : des taux d'engagement qui triplent les moyennes de l'industrie et une croissance organique pilotée entièrement à l'interne.</p>
+                <div class="case-tags">
+                    <span class="case-tag">Audit social</span>
+                    <span class="case-tag">Repositionnement</span>
+                    <span class="case-tag">Formation d'équipe</span>
+                    <span class="case-tag">Croissance organique</span>
+                </div>
+            </div>
+            <div class="case-visual">
+                <div class="visual-placeholder">Captures de contenu Shwap Club</div>
+                <div class="case-stat">
+                    <span class="stat-value">97,48%</span>
+                    <span class="stat-label">Taux de portée organique</span>
+                </div>
+                <div class="case-stat">
+                    <span class="stat-value">814%</span>
+                    <span class="stat-label">Taux de vues organiques</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CANADIAN SEAL -->
+        <div class="case-card fade-in">
+            <div>
+                <p class="case-meta">Stratégie · Campagne d'influence</p>
+                <h3>Canadian Seal Products — «&nbsp;Proudly Indigenous&nbsp;»</h3>
+                <p class="case-desc">Conception et déploiement d'une campagne d'influence pour un produit lié aux droits et au patrimoine autochtones. Le recrutement stratégique de créateurs TikTok autochtones a permis une narration authentique et respectueuse qui a fait évoluer l'opinion publique.</p>
+                <div class="case-tags">
+                    <span class="case-tag">Stratégie d'influence</span>
+                    <span class="case-tag">Recrutement de créateurs</span>
+                    <span class="case-tag">Sensibilité culturelle</span>
+                    <span class="case-tag">TikTok</span>
+                </div>
+            </div>
+            <div class="case-visual">
+                <div class="visual-placeholder">Visuels de la campagne « Proudly Indigenous »</div>
+                <div class="case-stat">
+                    <span class="stat-value">13,9M</span>
+                    <span class="stat-label">Impressions organiques</span>
+                </div>
+                <div class="case-stat">
+                    <span class="stat-value">95%</span>
+                    <span class="stat-label">Sentiment positif</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos-section">
+    <div class="section-inner">
+        <p class="section-label" style="color: var(--carmine);">Marques avec lesquelles j'ai travaillé</p>
+        <div class="logos-grid">
+            <span class="logo-item">Coca-Cola</span>
+            <span class="logo-item">Danone</span>
+            <span class="logo-item">Fromagerie Bel</span>
+            <span class="logo-item">Producteurs laitiers du Canada</span>
+            <span class="logo-item">Rubino</span>
+            <span class="logo-item">Guru Énergie</span>
+            <span class="logo-item">Sail</span>
+            <span class="logo-item">Quartz & Co</span>
+            <span class="logo-item">Shwap Club</span>
+            <span class="logo-item">Mito Sushi</span>
+        </div>
+        <p class="newsletter-mention">Je publie également <a href="#">Unsubscribe</a> — une infolettre sur la stratégie de contenu.</p>
+    </div>
+</section>
+
+<!-- À PROPOS -->
+<section class="about" id="a-propos">
+    <div class="section-inner">
+        <p class="section-label">À propos</p>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Ma carrière s'est construite à la croisée de la stratégie de marque, de la compréhension du consommateur et du contenu numérique — avec une mission constante : aider les équipes à remplacer l'improvisation par l'intention.</p>
+                <p>J'ai fait mes armes en agence (Publicis, Sid Lee, Made in), sur des marques comme Coca-Cola, Danone et Fromagerie Bel. C'est là que j'ai compris que les meilleures stratégies sont assez souples pour s'adapter à tous les canaux, et assez solides pour ne jamais perdre de vue l'essence de la marque.</p>
+                <p>Aujourd'hui, je travaille de façon indépendante, en collaboration avec des studios créatifs et des marques directement — PME, corporatifs, institutionnels et OBNL. Je me spécialise dans le marché québécois, où je conçois des stratégies éditoriales en français d'abord, ancrées dans la dynamique culturelle locale. Mon travail va bien au-delà des médias sociaux : positionnement, ligne éditoriale, plans de contenu mensuel, et un cadre clair aligné sur vos objectifs d'affaires pour chaque décision marketing.</p>
+            </div>
+            <div class="about-details">
+                <dl>
+                    <dt>Basée à</dt>
+                    <dd>Montréal, Québec</dd>
+                    <dt>Langues</dt>
+                    <dd>Français · Anglais</dd>
+                    <dt>Spécialités</dt>
+                    <dd>Stratégie de marque · Médias sociaux · Audience-first · Outils sur mesure · Parcours client · IA agentique · Influence</dd>
+                    <dt>Infolettre</dt>
+                    <dd>Unsubscribe</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="section-inner">
+        <p class="section-label" style="color: var(--carmine);">Entrons en contact</p>
+        <h2>Parlons de ce qui s'en vient<br>pour votre marque.</h2>
+        <p class="contact-subtitle">Vous êtes une marque qui cherche une stratégie éditoriale alignée sur ses objectifs d'affaires, ou un studio créatif qui cherche une stratège médias sociaux senior pour compléter son équipe — écrivez-moi.</p>
+        <div class="contact-links">
+            <a href="mailto:hey@mjmassy.com">hey@mjmassy.com</a>
+            <a href="https://linkedin.com/in/mjmassy" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 MJ Massy Inc.</p>
+    <p><a href="../en/">English</a></p>
+</footer>
+
+<script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
