@@ -201,9 +201,6 @@
             overflow: hidden;
             flex-shrink: 0;
         }
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
 
         /* ========== SECTION STYLING ========== */
         section {
@@ -250,33 +247,9 @@
 
         /* ========== PROBLEMS ========== */
         .problems {
-            background: 
-                radial-gradient(ellipse at 15% 20%, rgba(112, 15, 16, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 85% 75%, rgba(48, 32, 17, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 0%, rgba(164, 87, 60, 0.06) 0%, transparent 40%),
-                radial-gradient(ellipse at 70% 40%, rgba(60, 55, 30, 0.05) 0%, transparent 45%),
-                repeating-linear-gradient(
-                    0deg,
-                    transparent,
-                    transparent 2px,
-                    rgba(48, 32, 17, 0.015) 2px,
-                    rgba(48, 32, 17, 0.015) 4px
-                ),
-                linear-gradient(170deg, #e2dbd0 0%, #ddd5c7 30%, #d8cfbf 60%, #ddd4c5 100%);
+            background: var(--beige);
             overflow: hidden;
         }
-
-        .problems::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.03;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .problems .section-inner { position: relative; z-index: 1; }
 
         .problems-grid {
             display: grid;
@@ -363,7 +336,7 @@
         }
 
         /* ========== PROCESS ========== */
-        .process { background: #e8e4de; }
+        .process { background: var(--beige); }
 
         .process-steps {
             display: grid;
@@ -556,7 +529,7 @@
         }
 
         .newsletter-mention {
-            margin-top: 3.5rem;
+            margin-top: 5rem;
             padding-top: 2rem;
             border-top: 1px solid rgba(147, 12, 22, 0.25);
             font-family: var(--mono);
@@ -615,7 +588,6 @@
             background: var(--licorice);
             color: var(--beige);
             text-align: center;
-            padding: 12rem 2rem;
         }
 
         .contact::after { display: none; }
@@ -654,7 +626,7 @@
 
         /* ========== FOOTER ========== */
         footer {
-            background: var(--black);
+            background: var(--licorice);
             padding: 2rem;
             display: flex;
             justify-content: space-between;
@@ -693,7 +665,7 @@
             section { padding: 7rem 1.25rem; }
             .hero { padding: 8rem 1.25rem 4rem; }
             nav { padding: 1rem 1.25rem; }
-            .contact { padding: 5rem 1.25rem; }
+            .contact { padding: 7rem 1.25rem; }
             .contact-links { flex-direction: column; align-items: center; gap: 1.5rem; }
         }
 
@@ -742,7 +714,7 @@
             <a href="#problemes" class="cta-link">Découvrir comment <span>→</span></a>
         </div>
         <div class="hero-photo">
-            <img src="../mj_massy_bw.jpg" alt="MJ Massy" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+            <img src="mj_massy_bw.jpg" alt="MJ Massy" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
         </div>
     </div>
 </section>
@@ -939,7 +911,7 @@
                 </div>
             </div>
             <div class="case-visual">
-                <div class="visual-placeholder">Capture du guide stratégique interactif</div>
+                <img src="Rubino Playbook.png" alt="Capture du guide stratégique interactif Rubino" style="width: 100%; height: auto; display: block;">
             </div>
         </div>
 
@@ -957,7 +929,7 @@
                 </div>
             </div>
             <div class="case-visual">
-                <div class="visual-placeholder">Captures de contenu Shwap Club</div>
+                <img src="Shwap Club.png" alt="Captures de contenu Shwap Club" style="width: 100%; height: auto; display: block;">
                 <div class="case-stat">
                     <span class="stat-value">97,48%</span>
                     <span class="stat-label">Taux de portée organique</span>
@@ -983,7 +955,7 @@
                 </div>
             </div>
             <div class="case-visual">
-                <div class="visual-placeholder">Visuels de la campagne « Proudly Indigenous »</div>
+                <img src="Proudly Indeginous.jpeg" alt="Visuels de la campagne Proudly Indigenous" style="width: 100%; height: auto; display: block;">
                 <div class="case-stat">
                     <span class="stat-value">13,9M</span>
                     <span class="stat-label">Impressions organiques</span>
